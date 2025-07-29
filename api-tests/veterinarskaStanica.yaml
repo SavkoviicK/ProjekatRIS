@@ -1,0 +1,752 @@
+type: collection.insomnia.rest/5.0
+name: Veterinarska_stanica
+meta:
+  id: wrk_93f4ca5a828e42799e21fc10b28d4af9
+  created: 1753712838102
+  modified: 1753717278188
+  description: ""
+collection:
+  - url: http://localhost:8080/api/korisnici
+    name: Unesi sve korisnike
+    meta:
+      id: req_dd962706839c432cb2c09a0476372e3b
+      created: 1753712838191
+      modified: 1753716559634
+      isPrivate: false
+      description: ""
+      sortKey: -1753712838191
+    method: GET
+    parameters:
+      - id: pair_6a0cae9225c146fe9ffddb21562df224
+        name: Dobavi sve korisnike
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/korisnici
+    name: Kreiraj novog korisnika
+    meta:
+      id: req_2e3abf7734ee499d938433ca601e2bcc
+      created: 1753714332585
+      modified: 1753795986477
+      isPrivate: false
+      description: ""
+      sortKey: -1753714332585
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "ime": "Dr. Marko",
+            "prezime": "Petrović",
+            "email": "dr.marko@veterinarska.com",
+            "password": "vet123",
+            "uloga": "VETERINAR",
+            "enabled": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/korisnici/1
+    name: Unesi jednog korisnika
+    meta:
+      id: req_db026c1fefbc479fad5ba58faee99099
+      created: 1753715151495
+      modified: 1753716551903
+      isPrivate: false
+      description: ""
+      sortKey: -1753715151495
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/korisnici/1
+    name: Azuriraj korisnika
+    meta:
+      id: req_e3cfd07ceb2e47f69423f55cc9b44651
+      created: 1753715949743
+      modified: 1753716061853
+      isPrivate: false
+      description: ""
+      sortKey: -1753715949743
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "ime": "Strahinja",
+            "prezime": "Veljovic",
+            "email": "strahinja.veljovic@gmail.com",
+            "password": "strahinja123",
+            "uloga": "VLASNIK",
+            "enabled": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/korisnici/1
+    name: Obrisi korisnika
+    meta:
+      id: req_fdc94125f8464025b0888236867a4ab1
+      created: 1753716364946
+      modified: 1753716449107
+      isPrivate: false
+      description: ""
+      sortKey: -1753716364946
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/lekovi
+    name: Unesi sve lekove
+    meta:
+      id: req_de47bb8e332c4237940775f2f4331aaa
+      created: 1753717332738
+      modified: 1753719225573
+      isPrivate: false
+      description: ""
+      sortKey: -1753717332738
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/lekovi
+    name: Kreiraj novi lek
+    meta:
+      id: req_f8253bb038904721bae6f8d609c343f2
+      created: 1753717850103
+      modified: 1753717891442
+      isPrivate: false
+      description: ""
+      sortKey: -1753717850103
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "naziv": "Brufen",
+            "opis": "Lek protiv bolova i upala",
+            "proizvodjac": "Galenika"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/lekovi/1
+    name: Unesi jedan lek
+    meta:
+      id: req_a34e1f48569441659fd264bdd6fdd425
+      created: 1753718025340
+      modified: 1753718143372
+      isPrivate: false
+      description: ""
+      sortKey: -1753718025340
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/lekovi/1
+    name: Azuriraj lek
+    meta:
+      id: req_c067e52a319841b6b6c63bfe442bb126
+      created: 1753718769015
+      modified: 1753718802045
+      isPrivate: false
+      description: ""
+      sortKey: -1753718769015
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "naziv": "Brufen",
+            "opis": "Lek protiv bolova i upala",
+            "proizvodjac": "Hemofarm"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/lekovi/3
+    name: Obrisi lek
+    meta:
+      id: req_50c2deb418d74a5d851902408ba634be
+      created: 1753719052946
+      modified: 1753719254168
+      isPrivate: false
+      description: ""
+      sortKey: -1753719052946
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/korisnici
+    name: Kreiraj vlasnika
+    meta:
+      id: req_594ee974abd74167b311e3909198e795
+      created: 1753719537955
+      modified: 1753719586828
+      isPrivate: false
+      description: ""
+      sortKey: -1753719537955
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "ime": "Ana",
+            "prezime": "Marković",
+            "email": "ana.markovic@yahoo.com",
+            "password": "sifra123",
+            "uloga": "VLASNIK",
+            "enabled": true
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/ljubimci
+    name: Unesi sve ljubimce
+    meta:
+      id: req_6dfa9b8cb3524081950e4c28b7b6c99b
+      created: 1753794104108
+      modified: 1753794182117
+      isPrivate: false
+      description: ""
+      sortKey: -1753794104108
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/ljubimci
+    name: Kreiraj novog ljubimca
+    meta:
+      id: req_856945c4e1f14b0e87da90ea3f28edd7
+      created: 1753795351237
+      modified: 1753795496975
+      isPrivate: false
+      description: ""
+      sortKey: -1753795351237
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "ime": "Bella",
+            "vrsta": "macka",
+            "rasa": "Persijska",
+            "pol": "Z",
+            "datumRodjenja": "2021-03-10",
+            "vlasnik": {
+                "id": 2
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/ljubimci
+    name: Dodaj ljubimca po ID
+    meta:
+      id: req_8b628e70ddd744f59e91b651e435f104
+      created: 1753795646414
+      modified: 1753795869577
+      isPrivate: false
+      description: ""
+      sortKey: -1753795646414
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/ljubimci/3
+    name: Azuriraj ljubimca
+    meta:
+      id: req_3241dd91d23b48bbb6a9609b42feb320
+      created: 1753795693773
+      modified: 1753795735192
+      isPrivate: false
+      description: ""
+      sortKey: -1753795693773
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "ime": "Bella",
+            "vrsta": "mačka",
+            "rasa": "Siamska",
+            "pol": "Z",
+            "datumRodjenja": "2021-03-10",
+            "vlasnik": {
+                "id": 2
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/ljubimci/2
+    name: Obrisi jubimca
+    meta:
+      id: req_95b33c2c3fa74b79a453cf5939ab2b99
+      created: 1753795765869
+      modified: 1753795886969
+      isPrivate: false
+      description: ""
+      sortKey: -1753795765869
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/termini
+    name: Unesi sve termine
+    meta:
+      id: req_3d0f3be4b95a45adaffd7380080e16cd
+      created: 1753796270210
+      modified: 1753797096029
+      isPrivate: false
+      description: ""
+      sortKey: -1753796270210
+    method: GET
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "datum_vreme": "2025-08-01T14:00:00",
+            "status": "ZAKAZANO",
+            "vlasnik": {
+                "id": 2
+            },
+            "veterinar": {
+                "id": 3
+            },
+            "ljubimac": {
+                "id": 4
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/termini
+    name: Kreiraj novi termin
+    meta:
+      id: req_8a65147d7b68484189b39dad1db30712
+      created: 1753796316235
+      modified: 1753798236230
+      isPrivate: false
+      description: ""
+      sortKey: -1753796316235
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "datum_vreme": "2025-08-02T09:00:00",
+            "status": "ZAKAZANO",
+            "vlasnik": {
+                "id": 2
+            },
+            "veterinar": {
+                "id": 3
+            },
+            "ljubimac": {
+                "id": 4
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/termini
+    name: Kreiraj jedan termin
+    meta:
+      id: req_07b477d7d4cc4b05b801691101d78cfc
+      created: 1753797248304
+      modified: 1753797515508
+      isPrivate: false
+      description: ""
+      sortKey: -1753797248304
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/termini/1
+    name: Azuriraj termin
+    meta:
+      id: req_80fbbdcd528d4e32866be267f455e89d
+      created: 1753797298223
+      modified: 1753797337571
+      isPrivate: false
+      description: ""
+      sortKey: -1753797298223
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "datum_vreme": "2025-08-01T14:00:00",
+            "status": "ZAKAZANO",
+            "vlasnik": {
+                "id": 2
+            },
+            "veterinar": {
+                "id": 3
+            },
+            "ljubimac": {
+                "id": 4
+            }
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/termini/1
+    name: Obrisi termin
+    meta:
+      id: req_717da66297634d41b54e13d922c23059
+      created: 1753797444717
+      modified: 1753797502956
+      isPrivate: false
+      description: ""
+      sortKey: -1753797444717
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pregledi
+    name: Dodaj sve preglede
+    meta:
+      id: req_81a48396836a4f60a40c8c516c74ef29
+      created: 1753798216990
+      modified: 1753798559748
+      isPrivate: false
+      description: ""
+      sortKey: -1753798216990
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pregledi
+    name: Kreiraj novi pregled
+    meta:
+      id: req_cc7b50a694064c3c8b09e654faf575bf
+      created: 1753798666588
+      modified: 1753798710402
+      isPrivate: false
+      description: ""
+      sortKey: -1753798666588
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "termin": {
+                "id": 2
+            },
+            "opisStanja": "Ljubimac je bio umoran i bez apetita",
+            "dijagnoza": "Blaga infekcija",
+            "propisanaTerapija": "Antibiotici 2 puta dnevno, 7 dana"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pregledi/1
+    name: Kreiraj jedan pregled
+    meta:
+      id: req_50cdbdfbe1f942e7a175d6cc1189940a
+      created: 1753798795550
+      modified: 1753798863362
+      isPrivate: false
+      description: ""
+      sortKey: -1753798795550
+    method: GET
+    body:
+      mimeType: application/json
+      text: ""
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pregledi/1
+    name: Azuriraj pregled
+    meta:
+      id: req_597ed177a11a44c594824ae7efc34094
+      created: 1753798871820
+      modified: 1753798899550
+      isPrivate: false
+      description: ""
+      sortKey: -1753798871820
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+        {
+            "termin": {
+                "id": 2
+            },
+            "opisStanja": "Ljubimac je bio umoran i bez apetita",
+            "dijagnoza": "Blaga virusna infekcija",
+            "propisanaTerapija": "Antibiotici 3 puta dnevno, 10 dana"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/api/pregledi/1
+    name: Obrisi pregled
+    meta:
+      id: req_f6bfb688cade4cfeb67d78d8c940d269
+      created: 1753799057185
+      modified: 1753799079625
+      isPrivate: false
+      description: ""
+      sortKey: -1753799057185
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_0a5a639ae3fcbe799ac68b0e06bdf726b13764fe
+    created: 1753712838138
+    modified: 1753712838138
+environments:
+  name: Base Environment
+  meta:
+    id: env_0a5a639ae3fcbe799ac68b0e06bdf726b13764fe
+    created: 1753712838130
+    modified: 1753712838130
+    isPrivate: false
